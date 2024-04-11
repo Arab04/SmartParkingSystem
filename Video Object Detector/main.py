@@ -39,15 +39,14 @@ def process_frame(cap, mask, detector, tracker):
                 currentArray = np.array([x1, y1, x2, y2, confidence])
                 detections = np.vstack((detections, currentArray))
                 path = pltd.takeScreenshot(image, x1, y1, x2, y2)
-                print(path)
-                #pltd.detectAnprFromImage(path)
+                # pltd.detectAnprFromImage(path)
     trackerResult = tracker.update(detections)
     return image, trackerResult
 
 
 def draw(image, trackerResult, limits, totalCount):
     # Draws line: if car crosses this line, car will be detected
-    #cv2.line(image, (limits[0], limits[1]), (limits[2], limits[3]), color=(0, 191, 255), thickness=5)
+    # cv2.line(image, (limits[0], limits[1]), (limits[2], limits[3]), color=(0, 191, 255), thickness=5)
 
     for result in trackerResult:
         x1, y1, x2, y2, trackerId = result
