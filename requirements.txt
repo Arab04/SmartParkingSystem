@@ -19,3 +19,8 @@ lap==0.4.0
 easyocr==1.7.0
 Pillow==9.5.0
 imutils
+fastapi~=0.110.1
+psycopg2-binary
+sqlalchemy~=2.0.29
+uvicorn
+pydantic~=2.6.4
